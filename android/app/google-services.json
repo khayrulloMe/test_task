@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078222309873",
+    "project_id": "testtaskapp-7939a",
+    "storage_bucket": "testtaskapp-7939a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078222309873:android:ba3f65cd0c9fb0278adc50",
+        "android_client_info": {
+          "package_name": "uz.mesoft.test_task.test_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078222309873-ota7qir2osr58qaqdjqgemlttapf07bs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVKVp9FKao5Fxs9Rl7nA1ayeXV3Nckn6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078222309873-ota7qir2osr58qaqdjqgemlttapf07bs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
