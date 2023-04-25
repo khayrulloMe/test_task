@@ -1,10 +1,18 @@
+import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
-import 'ui/screen/signin/login_screen.dart';
+import 'package:get/get.dart';
+import 'package:test_task/ui/screen/add_debt/add_debt_screen.dart';
+import 'package:test_task/ui/screen/chat/chat_screen.dart';
+import 'package:test_task/ui/screen/home/home_screen.dart';
+import 'package:test_task/ui/screen/main/main_screen.dart';
+import 'package:test_task/ui/screen/profile/profile_screen.dart';
+import 'package:test_task/ui/screen/signup/signup_screen.dart';
+import 'ui/screen/signin/signin_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await AndroidAlarmManager.initialize();
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
@@ -14,14 +22,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    bool isHaveUser = true;
+      return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: const SignInScreen(),
+      getPages: [
+        GetPage(name: HomeScreen.id, page: () => const HomeScreen()),
+        GetPage(name: SignInScreen.id, page: () => const SignInScreen()),
+        GetPage(name: SignUpScreen.id, page: () => const SignUpScreen()),
+        GetPage(name: ProfileScreen.id, page: () => const ProfileScreen()),
+        GetPage(name: ChatScreen.id, page: () => const ChatScreen()),
+        GetPage(name: MainScreen.id, page: () =>  MainScreen()),
+        GetPage(name: AddDebtScreen.id, page: () => const AddDebtScreen()),
+    ]
+      ,
+      initialRoute: isHaveUser? MainScreen.id:SignInScreen.id,
     );
   }
 }

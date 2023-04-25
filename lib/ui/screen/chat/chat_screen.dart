@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
+  static const id = '/chat';
   const ChatScreen({Key? key}) : super(key: key);
 
   @override
@@ -8,7 +9,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Log In"),
+        title: const Text("Chat"),
       ),
     );
   }
