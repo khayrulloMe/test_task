@@ -18,7 +18,7 @@ class MainScreen extends StatelessWidget {
         () => Scaffold(
           body:IndexedStack(
               index: _controller.index.value,
-              children: const [HomeScreen(),AddDebtScreen(),ChatScreen(),ProfileScreen()],),
+              children: [HomeScreen(),AddDebtScreen(),ChatScreen(),ProfileScreen()],),
           bottomNavigationBar: BottomNavigationBar(
             items: const [
             BottomNavigationBarItem(icon:Icon(Icons.home),label: 'Home',backgroundColor: Colors.indigo),
