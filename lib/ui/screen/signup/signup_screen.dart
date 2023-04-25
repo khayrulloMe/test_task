@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
+  static const id = '/signUp';
   const SignUpScreen({Key? key}) : super(key: key);
 
   @override
